@@ -1,16 +1,69 @@
-# React + Vite
+# CPU Scheduler Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visual, interactive simulator of classic CPU scheduling algorithms built with React.  
+Final project for Computer Architecture and Operating Systems course.
 
-Currently, two official plugins are available:
+**Team:** AkAsMaDiAM
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Team & Contributions
 
-## React Compiler
+| Name | Algorithm | File |
+|------|-----------|------|
+| Akzhol Khassengaziyev | FIFO, SJF | `src/algorithms/fifo.js`|
+| Tastan Asylkhan | Round Robin | `src/algorithms/roundRobin.js` |
+| Ibrash Madiyar | Priority Scheduling | `src/algorithms/priority.js` |
+| Dildakhan Didar | MLFQ | `src/algorithms/mlfq.js` |
+| Jiyembayev Amir | CFS + Setup + README | `src/algorithms/cfs.js` |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Algorithms Implemented
 
-## Expanding the ESLint configuration
+- **FIFO** — First In First Out, non-preemptive, processes run in arrival order
+- **SJF** — Shortest Job First, picks the ready process with the smallest burst time
+- **Round Robin** — preemptive, each process gets a configurable time quantum
+- **Priority** — non-preemptive, lower number = higher priority
+- **MLFQ** — Multi-Level Feedback Queue, 3 queues with priority boost and anti-gaming
+- **CFS** — Linux Completely Fair Scheduler, vruntime-based weighted fairness
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Gantt chart with live step-by-step playback
+- Per-process metrics: response time, waiting time, turnaround time
+- Compare all 6 algorithms side by side on the same workload
+- Workload presets: CPU-bound, I/O-bound, mixed
+- Configurable parameters: RR quantum, MLFQ boost interval and queue quantums
+
+## How to Run
+
+```bash
+npm install
+npm run dev
+```
+
+Opens at `http://localhost:5173`
+
+## Project Structure
+
+```
+src/
+  algorithms/
+    fifo.js          — FIFO and SJF (Akzhol)
+    roundRobin.js    — Round Robin (Tastan)
+    priority.js      — Priority Scheduling (Madiyar)
+    mlfq.js          — MLFQ (Didar)
+    cfs.js           — Linux CFS (Amir)
+  App.jsx            — UI, Gantt chart, metrics
+README.md
+AI_USAGE.md
+```
+
+## Repository
+
+https://github.com/jeeamir/cpu-scheduler-simulator
+
+## Presentation
+
+[Add Canva link here]
+
+## AI Usage
+
+See [AI_USAGE.md](./AI_USAGE.md)
