@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { runFIFO, runSJF } from "./algorithms/fifo";
-import { runRR } from "./algorithms/roundRobin";
-import { runPriority } from "./algorithms/priority";
+import { runRR } from "./algorithms/roundrobin.js";
+import { runPriority } from "./algorithms/priority.js";
 import { runMLFQ } from "./algorithms/mlfq";
-import { runCFS } from "./algorithms/cfs";
+import { runCFS } from "./algorithms/cfs.js";
 
 // ── Colors per process ──────────────────────────────────────
 const COLORS = ['#378ADD','#1D9E75','#D85A30','#D4537E','#7F77DD','#BA7517','#E24B4A','#5DCAA5','#AFA9EC','#9FE1CB'];
