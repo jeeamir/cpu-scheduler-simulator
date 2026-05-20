@@ -62,7 +62,7 @@ https://github.com/jeeamir/cpu-scheduler-simulator
 
 ## Presentation
 
-[Add Canva link here]
+[https://canva.link/406avwucco4u90l]
 
 ## AI Usage
 
